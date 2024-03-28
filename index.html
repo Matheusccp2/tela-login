@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="public/reset.css">
+    <link rel="stylesheet" href="public/style.css">
+
+    <title>Tela de Login</title>
+</head>
+<body>
+    <section>
+        <h1>Junte-se a nossa Comunidade!</h1>
+
+        <form id="cadastroForm">
+            <label for="email">Email</label>
+            <div class="input-box">
+                <img src="src/email.png" alt="emoji email" class="icon">
+                <input type="text" id="email" name="Email" placeholder="nome@gmail.com">
+            </div>
+
+            <label for="numero">Telefone</label>
+            <div class="input-box">
+                <select id="pais" onchange="atualizarCodigoPostal()">
+                    <div class="ls-custom">
+                        <option value="brasil">Brasil (+55)</option>
+                        <option value="eua">EUA (+1)</option>
+                    </div>
+                </select>
+                <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+            </div>
+
+            <label for="senha">Senha</label>
+            <div id="divSenha" class="forca-senha">
+                <img src="src/cadeado.png" alt=" emoji cadeado" class="icon">
+                <input type="password" id="senha" placeholder="Evite senhas de fácil acesso" name="senha">
+                <span id="togglePassword" class="toggle-password" onclick="toggleSenhaVisibility()">Mostrar</span>
+            </div>
+            <div id="forcaSenha" class="forca-senha-msg"></div>
+
+            <div class="termos">
+                <input type="checkbox">
+                <p>Eu concordo com os <a href="#">Termos de uso e Privacidade</a></p>
+            </div>
+            <button class="entrar" type="submit">Entrar</button>
+            <a href="#" class="senha">Esqueci minha senha</a>
+        </form>
+    </section>
+</body>
+<script src="app.js"></script>
+</html>
